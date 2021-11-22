@@ -46,7 +46,7 @@
 
     3) For private repository add "postinstall": "husky install" in your package.json scripts
     3.1) For public repository add
-        "postinstall": "husky install"
+        "postinstall": "husky install",
         "prepublishOnly": "pinst --disable",
         "postpublish": "pinst --enable"
 

@@ -10,7 +10,6 @@ module.exports = {
     'plugin:promise/recommended',
     '@sanv/eslint-config-unicorn-typescript',
     'prettier',
-    'prettier/@typescript-eslint',
   ],
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   parser: '@typescript-eslint/parser',
