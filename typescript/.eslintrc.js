@@ -75,9 +75,30 @@ module.exports = {
       { selector: 'variableLike', format: ['camelCase', 'UPPER_CASE'] },
       { selector: 'variable', modifiers: ['destructured'], format: ['camelCase'] },
       { selector: 'variable', modifiers: ['global'], format: ['camelCase', 'PascalCase'] },
-      { selector: 'variable', modifiers: ['global'], types: ['function'], format: ['PascalCase'] },
-      { selector: 'function', modifiers: ['global'], format: ['PascalCase'] },
-      { selector: 'typeLike', prefix: ['T'], format: ['PascalCase'] },
+      // React Components should be in PascalCase
+      {
+        selector: 'variable',
+        modifiers: ['global'],
+        types: ['function'],
+        filter: {
+          // you can expand this regex to add more allowed prefixes
+          regex: '^(is|should|toggle|set|get|show|hide|fetch)',
+          match: false,
+        },
+        format: ['PascalCase'],
+      },
+      // Other functions should be in camelCase
+      { selector: 'function', modifiers: ['global'], format: ['camelCase'] },
+      {
+        selector: 'typeLike',
+        prefix: ['T'],
+        filter: {
+          // you can expand this regex to add more allowed names
+          regex: '^(Response|Error|Promise|P|T|Body)$',
+          match: false,
+        },
+        format: ['PascalCase'],
+      },
     ],
 
     // Spaces & Delimeters

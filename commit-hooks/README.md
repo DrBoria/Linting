@@ -57,3 +57,5 @@
 
 > Info about hooks for windows (https://typicode.github.io/husky/#/?id=yarn-on-windows)
 > If you use jira you can add jira commitLint config (https://github.com/Gherciu/commitlint-jira)
+
+> For proper work you need to run husky install. This will add husky scripts in your .git folder. Postinstall script will help you to make it automatically after dependencies installation
