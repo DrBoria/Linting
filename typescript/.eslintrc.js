@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
     'plugin:eslint-comments/recommended',
     'plugin:promise/recommended',
     '@sanv/eslint-config-unicorn-typescript',
